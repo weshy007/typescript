@@ -1,0 +1,8 @@
+<label for="skuInput">SKU</label>
+<input type="text"
+       id="skuInput"
+       placeholder="SKU"
+       [formControl]="$any(myForm.controls['sku'])">
+<div *ngIf="!myForm.controls['sku'].valid"
+     class="ui error message">SKU is invalid</div>
+<div *ngIf="myForm.controls['sku'].hasError('required')"></div>
